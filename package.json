@@ -1,0 +1,28 @@
+{
+  "name": "uploader",
+  "version": "1.0.0",
+  "description": "uploader",
+  "main": "",
+  "scripts": {
+    "start": "webpack serve --env mode=development",
+    "build": "webpack --env mode=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nangongfengqing/uploader.git"
+  },
+  "keywords": [
+    "uploader"
+  ],
+  "author": "liwq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nangongfengqing/uploader/issues"
+  },
+  "homepage": "https://github.com/nangongfengqing/uploader#readme",
+  "devDependencies": {
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.6.0"
+  }
+}
