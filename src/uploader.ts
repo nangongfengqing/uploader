@@ -17,7 +17,7 @@ interface Setting {
 export default class Uploader {
   setting: Setting
   uploadFiles: File[]
-  input: HTMLInputElement
+  input?: HTMLInputElement
   changeHandler: Function
   /**
    * constructor
@@ -37,11 +37,12 @@ export default class Uploader {
       withCredentials: false,
     }
     this.setting = Object.assign(defaultOption, option)
+    this.uploadFiles = []
     this.init()
   }
 
   private init() {
-    this.uploadFiles = []
+    // this.uploadFiles = []
     this.input = this.initInputElement(this.setting)
     this.changeHandler = (e: Event) => {
       const files = (e.target as HTMLInputElement).files
