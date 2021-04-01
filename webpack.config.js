@@ -4,7 +4,7 @@ module.exports = (env) => {
   const mode = env.mode
   return {
     mode,
-    entry: './src/uploader.js',
+    entry: './src/uploader.ts',
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'uploader.js',
@@ -25,6 +25,11 @@ module.exports = (env) => {
               presets: [['@babel/preset-env', { targets: 'defaults' }]],
             },
           },
+        },
+        {
+          test: /\.tsx?$/,
+          use: 'ts-loader',
+          exclude: /node_modules/,
         },
       ],
     },

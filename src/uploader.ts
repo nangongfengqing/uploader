@@ -1,4 +1,5 @@
 export default class Uploader {
+  setting: object
   constructor(option = {}) {
     const defaultOption = {
       url: '',
@@ -12,8 +13,8 @@ export default class Uploader {
       withCredentials: false,
     }
     this.setting = Object.assign(defaultOption, option)
-    this._init()
+    this.init()
   }
 
-  _init() {}
+  private init() {}
 }
